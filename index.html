@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking app</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,700;1,400&display=swap" rel="stylesheet">     
+</head>
+<body>
+
+    <main>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a id="my-notes"><i class="fas fa-plus mr-1"></i>My notes</a></li>
+                    <li class="active"><a id="new-note"><i class="fas fa-list mr-1"></i>New Note</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section>
+            <div id="add-container" class="add-note-container" onsubmit="addNewNote(event)">
+                <h1>Add note</h1>
+                <form class="note-form" id="note-form">
+                    <div class="form-control">
+                        <label for="title">Title</label>
+                        <input class="form-input" type="text" placeholder="Title" id="title" />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="note-content">Note</label>
+                        <textarea class="form-input" rows="15" placeholder="Note content" id="note-content"></textarea>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+
+                    </div>
+                    <button type="submit" class="button-submit"> Add note</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+</html>
